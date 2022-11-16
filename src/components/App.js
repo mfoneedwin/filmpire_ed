@@ -12,22 +12,14 @@ const App = () => {
     <div className={classes.root}>
    <CssBaseline/> 
    <NavBar/>
-   {/* Switch is main for page navigating */}
+   {/* Routes is main for page navigating */}
    <main className={classes.content} >
        <div className={classes.toolbar} />
        <Routes>
-          <Route exact path="/movie/:id" element={MovieInformation}>
-         
-          </Route>
-          <Route exact path="/actors/:id" element={Actors}>
-          
-          </Route>
-          <Route exact path="/" element={Movies}>
-         
-          </Route>
-          <Route exact path="/profile/:id" element={Profile}>
-          
-          </Route>
+          <Route exact path="/movie/:id" element={ <MovieInformation />}></Route>
+          <Route exact path="/actors/:id" element={<Actors/>}></Route>
+          <Route exact path="/" element={<Movies />}></Route>
+          <Route exact path="/profile/:id"  element={<Profile />}></Route>
        </Routes>
    </main>
     </div>
